@@ -6,6 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test-headless": "ng test --browsers=Chrome_without_security --code-coverage=true --watch=false",
+    "test:local": "ng test --browsers=ChromeHeadless --watch=false --codeCoverage=false",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "prettify": "prettier --write",
     "e2e": "ng e2e"
@@ -17,7 +19,6 @@
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~7.2.0",
-    "@angular/flex-layout": "^8.0.0-beta.25",
     "@angular/forms": "~7.2.0",
     "@angular/material": "^7.3.7",
     "@angular/platform-browser": "~7.2.0",
