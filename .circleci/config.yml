@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     environment:
-      CC_TEST_REPORTER_ID: 63bf3482eb35117d086d8cf82ee103a277b49739d04fdaf32ba0716d604b4e64
+      CC_TEST_REPORTER_ID: MY_REPORTER_ID
     docker:
       - image: circleci/node:8-browsers
     working_directory: ~/fast-food-fast-angular

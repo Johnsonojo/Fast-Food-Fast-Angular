@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/Johnsonojo/Fast-Food-Fast-Angular.svg?style=svg)](https://circleci.com/gh/Johnsonojo/Fast-Food-Fast-Angular)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4e633e1b2f9e8413ec0f/maintainability)](https://codeclimate.com/github/Johnsonojo/Fast-Food-Fast-Angular/maintainability)
-[![Coverage Status](https://coveralls.io/repos/github/Johnsonojo/Fast-Food-Fast-Angular/badge.svg?branch=develop)](https://coveralls.io/github/Johnsonojo/Fast-Food-Fast-Angular?branch=develop)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4e633e1b2f9e8413ec0f/test_coverage)](https://codeclimate.com/github/Johnsonojo/Fast-Food-Fast-Angular/test_coverage)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
