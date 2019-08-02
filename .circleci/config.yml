@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8-browsers
+    working_directory: ~/fast-food-fast-angular
+
+    steps:
+      - checkout
+      - restore_cache:
+          key: fast-food-fast-angular-{{ .Branch }}-{{ checksum "package.json" }}
+
+      - run: npm install
+
+      - save_cache:
+          paths:
+            - "node_modules"
+          key: fast-food-fast-angular-{{ checksum "package.json" }}
+      
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+
+      - run: npm run test-headless
+    
