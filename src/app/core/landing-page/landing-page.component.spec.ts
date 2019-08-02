@@ -25,10 +25,6 @@ describe('LandingPageComponent', () => {
   it('should have correct page content', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.siteTitle).toEqual('Fast-Food-Fast');
-  });
-
-  it('should have correct page content', () => {
-    const app = fixture.debugElement.componentInstance;
     expect(app.landingMessage).toEqual(
       'Fast-Food-Fast is a food delivery service app for a restaurant',
     );
