@@ -420,6 +420,9 @@ h2.topmessages {
   text-align: center;
 }
 
+p.text-center {
+  color: #4caf50;
+}
 @media only screen and (max-width: 600px) {
   .card img {
     width: 100%;

@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class LandingPageComponent implements OnInit {
   landingMessage =
     'Fast-Food-Fast is a food delivery service app for a restaurant';
-  siteTitle = 'Fast-Food-Fast';
   constructor() {}
 
   ngOnInit() {}

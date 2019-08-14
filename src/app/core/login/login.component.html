@@ -1,0 +1,47 @@
+<app-header></app-header>
+<h2 class="topmessage">Welcome Back</h2>
+<hr class="w-50" />
+<h2 class="topmessage">Login</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <div class="container">
+    <label for="email"><b>Email</b></label>
+    <input
+      type="text"
+      placeholder="Enter Email"
+      formControlName="email"
+      required
+    />
+
+    <label for="psw"><b>Password</b></label>
+    <input
+      type="password"
+      placeholder="Enter Password"
+      formControlName="password"
+      required
+    />
+    <label>
+      <input type="checkbox" checked="checked" name="remember" /> Remember me
+    </label>
+    <div>
+      <button
+        class="btn btn-pri w-100"
+        type="submit"
+        [disabled]="loginForm.invalid"
+      >
+        <span *ngIf="!loading">
+          Login
+        </span>
+        <app-spinner *ngIf="loading"></app-spinner>
+      </button>
+    </div>
+    <p class="form-extra-info text-center">
+      Don't have an account? Create one
+      <a routerLink="/signup" class="link">here</a>
+    </p>
+  </div>
+</form>
+
+<div class="footer change">
+  <p>&copy; 2018. fast-food-fast. All images from Google.</p>
+</div>
