@@ -5,6 +5,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/4e633e1b2f9e8413ec0f/test_coverage)](https://codeclimate.com/github/Johnsonojo/Fast-Food-Fast-Angular/test_coverage)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+Hosted app is [fast-food-fast-angular](https://fast-food-fast-angular.herokuapp.com/l)
 
 ## Development server
 
