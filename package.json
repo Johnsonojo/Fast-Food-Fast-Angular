@@ -3,14 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
+    "start:dev": "ng serve",
     "build": "ng build",
     "test": "ng test --code-coverage=true",
     "test-headless": "ng test --browsers=Chrome_without_security --code-coverage=true --watch=false",
     "test:local": "ng test --browsers=ChromeHeadless --watch=false --codeCoverage=false",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "prettify": "prettier --write",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -26,9 +28,12 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
+    "express": "^4.17.1",
     "ng6-toastr-notifications": "^1.0.4",
+    "path": "^0.12.7",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
+    "typescript": "~3.2.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -51,7 +56,10 @@
     "prettier": "^1.17.1",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
-    "tslint": "~5.11.0",
-    "typescript": "~3.2.2"
+    "tslint": "~5.11.0"
+  },
+  "engines": {
+    "node": "~10.16.0",
+    "npm": "~6.10.1"
   }
 }
