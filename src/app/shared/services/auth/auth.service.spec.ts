@@ -4,12 +4,8 @@ import {
   authServiceSpy,
   resetSpies,
   httpServiceSpy,
-  httpClientSpy,
 } from 'src/app/helpers/tests/spies';
 import { getSharedComponentImports } from 'src/app/helpers/tests/shared-imports';
-import { of } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import { appConfig } from '../../../config';
 import { HttpService } from '../http/http.service';
 
 describe('AuthService', () => {
@@ -36,5 +32,11 @@ describe('AuthService', () => {
     const data = {};
     service.onLogin(data);
     expect(httpServiceSpy.makeRequestWithData).toHaveBeenCalledTimes(1);
+  });
+
+  it('should fire signup endpoint', () => {
+    const data = {};
+    service.onSignup(data);
+    expect(httpServiceSpy.makeRequestWithData).toHaveBeenCalledTimes(2);
   });
 });
