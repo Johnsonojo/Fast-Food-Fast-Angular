@@ -1,0 +1,101 @@
+<app-header></app-header>
+<h2 class="topmessage">Welcome</h2>
+<hr class="w-50" />
+<h2 class="topmessage">Signup</h2>
+<form [formGroup]="signupForm" (ngSubmit)="signupUser()">
+  <div class="container">
+    <label><b>Username</b></label>
+    <input
+      type="text"
+      placeholder="Enter Username"
+      name="username"
+      formControlName="username"
+      required
+    />
+    <div
+      *ngIf="
+        !!formControls.username.invalid &&
+        !!formControls.username.errors.invalidUsername &&
+        (!!formControls.username.dirty || !!formControls.username.touched)
+      "
+      class="alert alert-danger"
+    >
+      Username should be only letters
+    </div>
+    <label><b>Email</b></label>
+    <input
+      type="text"
+      placeholder="e.g example@gmail.com"
+      name="email"
+      formControlName="email"
+      required
+    />
+    <div
+      *ngIf="
+        !!formControls.email.invalid &&
+        (!!formControls.email.dirty || !!formControls.email.touched) &&
+        !!formControls.email.errors.invalidEmail
+      "
+      class="alert alert-danger"
+    >
+      incorrect email format
+    </div>
+
+    <label><b>Password</b></label>
+    <input
+      type="password"
+      placeholder="Minimum of 6 alphanumeric characters"
+      name="password"
+      formControlName="password"
+      required
+    />
+    <div
+      *ngIf="
+        !!formControls.password.invalid &&
+        (!!formControls.password.dirty || !!formControls.password.touched)
+      "
+      class="alert alert-danger"
+    >
+      password: minimum of 6 alphanumeric characters
+    </div>
+
+    <label><b>Confirm Password</b></label>
+    <input
+      type="password"
+      placeholder="Minimum of 6 alphanumeric characters"
+      name="formControls.confirmPassword"
+      formControlName="confirmPassword"
+      required
+    />
+    <div
+      *ngIf="
+        !!formControls.confirmPassword.invalid &&
+        (!!formControls.confirmPassword.dirty ||
+          !!formControls.confirmPassword.touched) &&
+        !!formControls.confirmPassword.errors.mustMatch
+      "
+      class="alert alert-danger"
+    >
+      Passwords must match
+    </div>
+
+    <button
+      class="btn btn-pri w-100"
+      type="submit"
+      [disabled]="!signupForm.valid"
+    >
+      <span *ngIf="!loading">
+        Sign Up
+      </span>
+      <app-spinner *ngIf="loading"></app-spinner>
+    </button>
+    <p>
+      Do you already have an account? Login
+      <a routerLink="/login" class="link"><b>here</b></a>
+    </p>
+  </div>
+</form>
+
+<div class="footer change">
+  <p>&copy; 2018. fast-food-fast. All images from Google.</p>
+</div>

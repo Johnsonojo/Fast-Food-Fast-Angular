@@ -133,7 +133,7 @@ html {
 input[type='text'],
 input[type='password'] {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -867,4 +867,19 @@ tr:nth-child(even) {
   text-align: center;
   color: #45a049;
   background-color: white;
+}
+
+.alert {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  font-size: 0.7rem;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+button[disabled] {
+  background: #45a049;
+  opacity: 0.4;
 }

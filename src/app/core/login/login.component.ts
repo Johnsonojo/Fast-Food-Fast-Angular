@@ -32,15 +32,17 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     const loginData = this.loginForm.value;
 
-    this.authService.onLogin(loginData).subscribe(
-      res => {
-        this.toasterService.successToastr('Login was successful');
-        this.loading = false;
-      },
-      err => {
-        this.toasterService.errorToastr('Login not successful');
-        this.loading = false;
-      },
-    );
+    this.authService
+      .onLogin(this.formControls.email.value, this.formControls.password.value)
+      .subscribe(
+        res => {
+          this.toasterService.successToastr('Login was successful');
+          this.loading = false;
+        },
+        err => {
+          this.toasterService.errorToastr('Login not successful');
+          this.loading = false;
+        },
+      );
   }
 }

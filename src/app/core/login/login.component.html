@@ -5,18 +5,18 @@
 
 <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
   <div class="container">
-    <label for="email"><b>Email</b></label>
+    <label><b>Email</b></label>
     <input
       type="text"
-      placeholder="Enter Email"
+      placeholder="e.g example@gmail.com"
       formControlName="email"
       required
     />
 
-    <label for="psw"><b>Password</b></label>
+    <label><b>Password</b></label>
     <input
       type="password"
-      placeholder="Enter Password"
+      placeholder="Minimum of 6 alphanumeric characters"
       formControlName="password"
       required
     />
@@ -27,7 +27,7 @@
       <button
         class="btn btn-pri w-100"
         type="submit"
-        [disabled]="loginForm.invalid"
+        [disabled]="!loginForm.valid"
       >
         <span *ngIf="!loading">
           Login
@@ -35,9 +35,9 @@
         <app-spinner *ngIf="loading"></app-spinner>
       </button>
     </div>
-    <p class="form-extra-info text-center">
+    <p>
       Don't have an account? Create one
-      <a routerLink="/signup" class="link">here</a>
+      <a routerLink="/signup" class="link"><b>here</b></a>
     </p>
   </div>
 </form>

@@ -13,6 +13,7 @@ import { LoginComponent } from './core/login/login.component';
 import { HeaderComponent } from './core/header/header.component';
 import { AuthService } from './shared/services/auth/auth.service';
 import { SpinnerComponent } from './core/spinner/spinner.component';
+import { SignupComponent } from './core/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SpinnerComponent } from './core/spinner/spinner.component';
     LoginComponent,
     HeaderComponent,
     SpinnerComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
